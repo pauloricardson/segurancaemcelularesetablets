@@ -1,12 +1,190 @@
 ﻿<!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="light" style="">
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Slide 2</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Por que segurança mobile importa?</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+
+    .slide-container {
+      width: 1280px;
+      min-height: 720px;
+      background-color: #ffffff;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .brand-stripe {
+      width: 20px;
+      height: 100%;
+      background-color: #003366;
+      /* Azul Institucional Escuro */
+      flex-shrink: 0;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 60px 80px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      margin-bottom: 40px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 20px;
+    }
+
+    .title-accent {
+      width: 60px;
+      height: 6px;
+      background-color: #00aaff;
+      /* Azul Ciano */
+      margin-bottom: 15px;
+      border-radius: 3px;
+    }
+
+    .bullet-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+
+    .icon-box {
+      width: 56px;
+      height: 56px;
+      background-color: #f0f7ff;
+      color: #0055aa;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-right: 24px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .content-area {
+      display: flex;
+      flex: 1;
+      gap: 60px;
+    }
+
+    .text-column {
+      flex: 1.2;
+    }
+
+    .image-column {
+      flex: 0.8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .image-container {
+      width: 100%;
+      height: 100%;
+      max-height: 400px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      background-color: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
 </head>
-<body>
-  <h1>Slide 2</h1>
-  <p>Conteúdo do slide 2</p>
+
+<body style="">
+  <div class="slide-container shadow-2xl">
+    <!-- Faixa Lateral -->
+    <div class="brand-stripe"></div>
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+      <!-- Cabeçalho -->
+      <div class="header">
+        <div class="title-accent"></div>
+        <h2 class="text-5xl font-bold text-gray-900 mb-2">Por que segurança mobile importa?</h2>
+        <p class="text-xl text-gray-500 font-light">Seu celular é mais que um telefone: é sua carteira, álbum de fotos e
+          identidade digital.</p>
+      </div>
+      <!-- Corpo do Slide -->
+      <div class="content-area">
+        <!-- Coluna de Texto (Bullets) -->
+        <div class="text-column">
+          <div class="bullet-item">
+            <div class="icon-box">
+              <i class="fas fa-database"></i>
+            </div>
+            <div>
+              <p class="text-xl font-bold text-gray-800 mb-1">Dados Sensíveis e Pessoais</p>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                Dispositivos móveis concentram fotos, e-mails, conversas privadas e dados bancários em um único lugar,
+                tornando-se uma "mina de ouro" de informações.
+              </p>
+            </div>
+          </div>
+          <div class="bullet-item">
+            <div class="icon-box">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <div>
+              <p class="text-xl font-bold text-gray-800 mb-1">Alvo de Criminosos</p>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                Além do risco físico de roubo, celulares são alvos constantes de golpes virtuais, phishing e instalação
+                de aplicativos maliciosos.
+              </p>
+            </div>
+          </div>
+          <div class="bullet-item">
+            <div class="icon-box">
+              <i class="fas fa-user-shield"></i>
+            </div>
+            <div>
+              <p class="text-xl font-bold text-gray-800 mb-1">Prevenção Simples</p>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                A maioria dos incidentes pode ser evitada com configurações básicas de segurança e mudanças simples nos
+                hábitos de uso diário.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Coluna de Imagem -->
+        <div class="image-column">
+          <div class="image-container">
+            <img alt="Conceito de proteção de smartphone com escudo digital"
+              src="https://cryptoid.com.br/wp-content/uploads/2015/04/seguran%C3%A7a.jpg"
+              data-height-listener-added="true">
+          </div>
+          <!-- Elemento decorativo flutuante -->
+          <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-blue-100 rounded-full opacity-50 z-0"></div>
+          <div class="absolute -top-6 -left-6 w-16 h-16 bg-blue-50 rounded-full opacity-50 z-0"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
+
 </html>

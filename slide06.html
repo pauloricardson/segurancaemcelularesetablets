@@ -1,12 +1,274 @@
 ﻿<!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Slide 6</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Alerta - Cuidado com Links</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .slide-container {
+      width: 1280px;
+      min-height: 720px;
+      background-color: #ffffff;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .brand-stripe {
+      width: 20px;
+      height: 100%;
+      background-color: #003366;
+      /* Azul Institucional */
+      flex-shrink: 0;
+    }
+
+    .content-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 50px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header Styling */
+    .header {
+      margin-bottom: 40px;
+      border-left: 6px solid #dc2626;
+      /* Vermelho Alerta */
+      padding-left: 25px;
+    }
+
+    .header h2 {
+      color: #dc2626;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .header h1 {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: #1f2937;
+      line-height: 1.1;
+    }
+
+    /* Main Content Layout */
+    .grid-layout {
+      display: flex;
+      gap: 60px;
+      flex: 1;
+    }
+
+    .left-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .right-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Alert Box */
+    .alert-box {
+      background-color: #fff1f2;
+      /* Vermelho bem claro */
+      border: 2px solid #fda4af;
+      border-radius: 16px;
+      padding: 35px;
+      box-shadow: 0 10px 25px -5px rgba(225, 29, 72, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .alert-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      color: #be123c;
+    }
+
+    .alert-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-left: 15px;
+    }
+
+    /* Checklist Items */
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+
+    .check-icon {
+      width: 36px;
+      height: 36px;
+      background-color: #f0f9ff;
+      color: #0369a1;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 18px;
+      flex-shrink: 0;
+      font-size: 16px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .check-text p {
+      margin: 0;
+    }
+
+    .check-text strong {
+      display: block;
+      color: #374151;
+      font-size: 1.15rem;
+      margin-bottom: 4px;
+    }
+
+    .check-text span {
+      color: #6b7280;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    /* Forbidden Box - Bottom Accent */
+    .forbidden-action {
+      background-color: #7f1d1d;
+      color: white;
+      border-radius: 12px;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      margin-top: auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .forbidden-action::after {
+      content: '';
+      position: absolute;
+      right: -20px;
+      bottom: -20px;
+      width: 100px;
+      height: 100px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    .forbidden-icon {
+      font-size: 2.5rem;
+      margin-right: 20px;
+      color: #fca5a5;
+    }
+
+    /* Background Icon Decoration */
+    .bg-decoration {
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      font-size: 400px;
+      color: #f3f4f6;
+      transform: rotate(15deg);
+      z-index: 0;
+      pointer-events: none;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Slide 6</h1>
-  <p>Conteúdo do slide 6</p>
+  <div class="slide-container shadow-2xl">
+    <div class="brand-stripe"></div>
+    <!-- Background Decoration -->
+    <div class="bg-decoration">
+      <i class="fas fa-shield-virus"></i>
+    </div>
+    <div class="content-wrapper">
+      <div class="header">
+        <h2><i class="fas fa-triangle-exclamation mr-2"></i> Atenção Redobrada</h2>
+        <h1>Não clique em todos<br />os links que recebe</h1>
+      </div>
+      <div class="grid-layout">
+        <div class="left-col">
+          <div class="alert-box">
+            <div class="alert-header">
+              <i class="fas fa-bug text-4xl"></i>
+              <p class="alert-title">O perigo está nos detalhes</p>
+            </div>
+            <p class="text-gray-700 text-xl leading-relaxed mb-6">
+              Links maliciosos (Phishing) são a principal porta de entrada para roubo de senhas, clonagem de contas e
+              instalação de vírus.
+            </p>
+            <p class="font-bold text-red-700 text-2xl border-l-4 border-red-700 pl-4">
+              "Na dúvida, não clique."
+            </p>
+          </div>
+          <div class="forbidden-action shadow-lg">
+            <i class="fas fa-hand-paper forbidden-icon"></i>
+            <div>
+              <p class="font-bold text-xl text-white mb-1">REGRA DE OURO</p>
+              <p class="text-red-100 text-lg">Nunca forneça códigos de verificação recebidos por SMS ou WhatsApp a
+                terceiros.</p>
+            </div>
+          </div>
+        </div>
+        <div class="right-col pl-10">
+          <h3 class="text-2xl font-bold text-gray-800 mb-8 border-b pb-2 inline-block">O que analisar antes de agir?
+          </h3>
+          <div class="check-item">
+            <div class="check-icon"><i class="fas fa-magnifying-glass"></i></div>
+            <div class="check-text">
+              <p><strong>Analise o contexto</strong></p>
+              <p><span>Você estava esperando essa mensagem? É comum esse remetente te enviar links?</span></p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-icon"><i class="fas fa-clock"></i></div>
+            <div class="check-text">
+              <p><strong>Desconfie da urgência</strong></p>
+              <p><span>Frases como "Sua conta será bloqueada agora" ou "Promoção imperdível só hoje" tentam impedir que
+                  você raciocine.</span></p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-icon"><i class="fas fa-spell-check"></i></div>
+            <div class="check-text">
+              <p><strong>Observe a escrita</strong></p>
+              <p><span>Erros de português, formatação estranha ou saudações genéricas ("Prezado Cliente") são fortes
+                  indícios de golpe.</span></p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-icon"><i class="fas fa-globe"></i></div>
+            <div class="check-text">
+              <p><strong>Verifique o destino</strong></p>
+              <p><span>Se for necessário acessar um serviço, digite o endereço oficial no navegador em vez de clicar no
+                  link recebido.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
