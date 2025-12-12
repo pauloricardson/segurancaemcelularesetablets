@@ -1,12 +1,232 @@
 ﻿<!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Slide 13</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Explore Recursos de Segurança</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+
+    .slide-container {
+      width: 1280px;
+      min-height: 720px;
+      background-color: #ffffff;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .brand-stripe {
+      width: 20px;
+      height: 100%;
+      background-color: #003366;
+      /* Azul Institucional Escuro */
+      flex-shrink: 0;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 60px 80px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .title-accent {
+      width: 60px;
+      height: 6px;
+      background-color: #00aaff;
+      /* Azul Ciano */
+      margin-bottom: 15px;
+      border-radius: 3px;
+    }
+
+    .content-wrapper {
+      display: flex;
+      gap: 60px;
+      flex: 1;
+      align-items: flex-start;
+    }
+
+    .list-section {
+      flex: 1.3;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .list-item {
+      display: flex;
+      align-items: flex-start;
+      background-color: #f8fafc;
+      padding: 18px 20px;
+      border-radius: 12px;
+      border-left: 4px solid #003366;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+      transition: transform 0.2s ease;
+    }
+
+    .icon-wrapper {
+      width: 50px;
+      height: 50px;
+      background-color: #e0f2fe;
+      color: #0055aa;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+
+    .visual-section {
+      flex: 0.7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin-top: 10px;
+    }
+
+    .visual-card {
+      background: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      position: relative;
+      width: 100%;
+      height: 420px;
+    }
+
+    .visual-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .stat-bubble {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 15px;
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+      border-left: 4px solid #10b981;
+      /* Green emphasis for security */
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Slide 13</h1>
-  <p>Conteúdo do slide 13</p>
+  <div class="slide-container shadow-2xl">
+    <!-- Faixa Lateral -->
+    <div class="brand-stripe"></div>
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+      <!-- Cabeçalho -->
+      <div class="header">
+        <div class="title-accent"></div>
+        <h2 class="text-5xl font-bold text-gray-900 mb-3">Explore recursos de segurança</h2>
+        <p class="text-xl text-gray-600 font-light max-w-3xl">
+          Seu celular já possui ferramentas poderosas de proteção. Conheça e ative as principais funcionalidades nativas
+          para blindar seus dados.
+        </p>
+      </div>
+      <div class="content-wrapper">
+        <!-- Lista de Itens -->
+        <div class="list-section">
+          <!-- Item 1 -->
+          <div class="list-item">
+            <div class="icon-wrapper">
+              <i class="fas fa-map-location-dot"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-1">Localização Remota</h3>
+              <p class="text-gray-600 text-base leading-relaxed">
+                Ative o "Buscar" (iOS) ou "Encontre Meu Dispositivo" (Android). Eles são essenciais para rastrear,
+                bloquear e apagar dados remotamente em caso de perda ou roubo.
+              </p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="list-item">
+            <div class="icon-wrapper">
+              <i class="fas fa-shield-halved"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-1">Autenticação em 2 Fatores</h3>
+              <p class="text-gray-600 text-base leading-relaxed">
+                Proteja suas contas principais (Google, Apple ID, WhatsApp) com uma segunda etapa de verificação. É a
+                barreira mais eficaz contra invasões de conta.
+              </p>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="list-item">
+            <div class="icon-wrapper">
+              <i class="fas fa-key"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-1">Gerenciador de Senhas</h3>
+              <p class="text-gray-600 text-base leading-relaxed">
+                Use o gerenciador nativo ou apps confiáveis para criar e salvar senhas complexas e únicas para cada
+                serviço, evitando a reutilização de credenciais.
+              </p>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="list-item">
+            <div class="icon-wrapper">
+              <i class="fas fa-file-shield"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-1">Pastas e Fontes Seguras</h3>
+              <p class="text-gray-600 text-base leading-relaxed">
+                Bloqueie instalação de fontes desconhecidas e utilize recursos como a "Pasta Segura" para proteger
+                aplicativos bancários e documentos sensíveis com senha extra.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Seção Visual -->
+        <div class="visual-section">
+          <div class="visual-card">
+            <img alt="Smartphone displaying security shield indicating active protection"
+              src="https://page.gensparksite.com/slides_images/5d6fde4eda1454be8d6c9269cab97bdf.webp" />
+            <div class="stat-bubble" style="border-left-color: #10b981;">
+              <div class="flex items-center text-green-600 mb-1">
+                <i class="fas fa-check-circle mr-2"></i>
+                <span class="font-bold text-sm uppercase tracking-wide">Dica de Ouro</span>
+              </div>
+              <p class="text-sm text-gray-700 font-medium">
+                As configurações de fábrica nem sempre priorizam a segurança máxima. Explore os menus de Privacidade e
+                Segurança para ajustar suas preferências.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

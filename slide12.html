@@ -1,12 +1,230 @@
 ﻿<!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Slide 12</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Gerencie as Permissões dos Apps</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+
+    .slide-container {
+      width: 1280px;
+      min-height: 720px;
+      background-color: #ffffff;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .brand-stripe {
+      width: 20px;
+      height: 100%;
+      background-color: #003366;
+      flex-shrink: 0;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 50px 70px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      margin-bottom: 30px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 15px;
+    }
+
+    .title-accent {
+      width: 60px;
+      height: 6px;
+      background-color: #00aaff;
+      margin-bottom: 15px;
+      border-radius: 3px;
+    }
+
+    .columns-container {
+      display: flex;
+      flex: 1;
+      gap: 40px;
+    }
+
+    .col-card {
+      flex: 1;
+      border-radius: 16px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .col-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .col-do {
+      background-color: #f0fdf4;
+      /* Green-50 */
+      border: 1px solid #dcfce7;
+    }
+
+    .col-dont {
+      background-color: #fef2f2;
+      /* Red-50 */
+      border: 1px solid #fee2e2;
+    }
+
+    .item-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .list-item {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .item-icon {
+      margin-top: 4px;
+      margin-right: 15px;
+      font-size: 1.2rem;
+    }
+
+    .footer-badges {
+      display: flex;
+      gap: 15px;
+      margin-top: auto;
+      padding-top: 20px;
+      opacity: 0.8;
+    }
+
+    .footer-badge {
+      height: 40px;
+      background-color: #1f2937;
+      color: white;
+      border-radius: 8px;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Slide 12</h1>
-  <p>Conteúdo do slide 12</p>
+  <div class="slide-container shadow-2xl">
+    <div class="brand-stripe"></div>
+    <div class="main-content">
+      <!-- Header -->
+      <div class="header">
+        <div class="title-accent"></div>
+        <h2 class="text-5xl font-bold text-gray-900 mb-2">Gerencie as Permissões dos Apps</h2>
+        <p class="text-xl text-gray-500 font-light">Sua privacidade depende do que você autoriza. Conceda acessos com
+          cautela e apenas quando necessário.</p>
+      </div>
+      <!-- Columns -->
+      <div class="columns-container">
+        <!-- Column: DO's -->
+        <div class="col-card col-do shadow-sm">
+          <div class="col-header text-green-800">
+            <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-4 text-green-600">
+              <i class="fas fa-shield-alt text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold">Configure Corretamente</h3>
+              <p class="text-sm opacity-75">Boas práticas de privacidade</p>
+            </div>
+          </div>
+          <div class="item-list">
+            <div class="list-item text-green-900">
+              <i class="fas fa-filter item-icon text-green-600"></i>
+              <div>
+                <p class="font-bold text-lg mb-1">Princípio do Mínimo</p>
+                <p class="text-gray-600 leading-snug">Autorize apenas o essencial para o app funcionar. Ex: Um editor de
+                  fotos precisa acessar a galeria, mas não sua localização ou contatos.</p>
+              </div>
+            </div>
+            <div class="list-item text-green-900">
+              <i class="fas fa-clock item-icon text-green-600"></i>
+              <div>
+                <p class="font-bold text-lg mb-1">"Apenas Durante o Uso"</p>
+                <p class="text-gray-600 leading-snug">Ao ser solicitado, escolha sempre permissões temporárias ou que
+                  funcionem só com o app aberto (especialmente para GPS e microfone).</p>
+              </div>
+            </div>
+            <div class="list-item text-green-900">
+              <i class="fas fa-history item-icon text-green-600"></i>
+              <div>
+                <p class="font-bold text-lg mb-1">Revisão Periódica</p>
+                <p class="text-gray-600 leading-snug">Use o Painel de Privacidade (Android) ou Relatório de Privacidade
+                  (iOS) para ver quais apps acessaram seus dados recentemente.</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-badges">
+            <div class="footer-badge bg-green-700">
+              <i class="fas fa-cog mr-2"></i> Configurações &gt; Privacidade
+            </div>
+          </div>
+        </div>
+        <!-- Column: DON'Ts -->
+        <div class="col-card col-dont shadow-sm">
+          <div class="col-header text-red-800">
+            <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mr-4 text-red-600">
+              <i class="fas fa-user-secret text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold">Evite Exposição</h3>
+              <p class="text-sm opacity-75">Riscos comuns a evitar</p>
+            </div>
+          </div>
+          <div class="item-list">
+            <div class="list-item text-red-900">
+              <i class="fas fa-lock-open item-icon text-red-600"></i>
+              <div>
+                <p class="font-bold text-lg mb-1">Opção "Permitir Sempre"</p>
+                <p class="text-gray-600 leading-snug">Evite conceder acesso irrestrito em segundo plano, pois isso drena
+                  bateria e expõe sua rotina de localização a terceiros.</p>
+              </div>
+            </div>
+            <div class="list-item text-red-900">
+              <i class="fas fa-eye item-icon text-red-600"></i>
+              <div>
+                <p class="font-bold text-lg mb-1">Rastreamento entre Apps</p>
+                <p class="text-gray-600 leading-snug">No iOS, sempre selecione "Pedir ao App para não Rastrear". Isso
+                  impede que seus dados de navegação sejam compartilhados para publicidade.</p>
+              </div>
+            </div>
+            <div class="list-item text-red-900">
+              <i class="fas fa-sms item-icon text-red-600"></i>
+              <div>
+                <p class="font-bold text-lg mb-1">Acessos Críticos Indevidos</p>
+                <p class="text-gray-600 leading-snug">Desconfie imediatamente de jogos ou utilitários simples que pedem
+                  acesso a SMS, Telefone ou Acessibilidade.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
