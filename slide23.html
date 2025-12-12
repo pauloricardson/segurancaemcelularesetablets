@@ -1,12 +1,201 @@
 ﻿<!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Slide 23</title>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Comprar Usado com Segurança</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+
+    .slide-container {
+      width: 1280px;
+      min-height: 720px;
+      background-color: #ffffff;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .brand-stripe {
+      width: 20px;
+      height: 100%;
+      background-color: #003366;
+      /* Azul Institucional Escuro */
+      flex-shrink: 0;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 50px 80px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      margin-bottom: 40px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 20px;
+    }
+
+    .title-accent {
+      width: 60px;
+      height: 6px;
+      background-color: #00aaff;
+      /* Azul Ciano */
+      margin-bottom: 15px;
+      border-radius: 3px;
+    }
+
+    /* Checklist specific styles */
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      flex: 1;
+    }
+
+    .checklist-card {
+      background-color: #f8fafc;
+      border-left: 6px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 25px;
+      display: flex;
+      align-items: flex-start;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .checklist-card.priority {
+      border-left-color: #00aaff;
+      background-color: #f0f9ff;
+    }
+
+    .check-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      border: 2px solid #00aaff;
+      color: #00aaff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      flex-shrink: 0;
+      font-size: 18px;
+    }
+
+    .checklist-card.priority .check-circle {
+      background-color: #00aaff;
+      color: #ffffff;
+    }
+
+    .card-content h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 8px;
+    }
+
+    .card-content p {
+      font-size: 1rem;
+      color: #64748b;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Footer tip */
+    .tip-box {
+      margin-top: 30px;
+      background-color: #fffbeb;
+      border: 1px solid #fcd34d;
+      border-radius: 8px;
+      padding: 15px 25px;
+      display: flex;
+      align-items: center;
+      color: #92400e;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Slide 23</h1>
-  <p>Conteúdo do slide 23</p>
+  <div class="slide-container shadow-2xl">
+    <!-- Faixa Lateral -->
+    <div class="brand-stripe"></div>
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+      <!-- Cabeçalho -->
+      <div class="header">
+        <div class="title-accent"></div>
+        <h2 class="text-5xl font-bold text-gray-900 mb-2">Comprar usado com segurança</h2>
+        <p class="text-xl text-gray-500 font-light">Checklist obrigatório para evitar aparelhos bloqueados ou roubados.
+        </p>
+      </div>
+      <!-- Grid de Checklist -->
+      <div class="checklist-grid">
+        <!-- Item 1 -->
+        <div class="checklist-card priority">
+          <div class="check-circle">
+            <i class="fas fa-check"></i>
+          </div>
+          <div class="card-content">
+            <h3>Desvínculo de Contas</h3>
+            <p>Certifique-se de que o dono anterior removeu completamente a conta iCloud (Apple) ou Google (Android). O
+              aparelho não deve pedir a senha antiga ao ser reiniciado.</p>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="checklist-card priority">
+          <div class="check-circle">
+            <i class="fas fa-check"></i>
+          </div>
+          <div class="card-content">
+            <h3>Situação do IMEI</h3>
+            <p>Consulte o IMEI do aparelho no site da Anatel (Consulta IMEI) para verificar se há registros de furto,
+              roubo ou bloqueio por perda.</p>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="checklist-card">
+          <div class="check-circle">
+            <i class="fas fa-check"></i>
+          </div>
+          <div class="card-content">
+            <h3>Restauração de Fábrica</h3>
+            <p>Para sua segurança e privacidade, sempre execute a "Restauração de Fábrica" (reset) antes de começar a
+              configurar o dispositivo com seus dados.</p>
+          </div>
+        </div>
+        <!-- Item 4 -->
+        <div class="checklist-card">
+          <div class="check-circle">
+            <i class="fas fa-check"></i>
+          </div>
+          <div class="card-content">
+            <h3>Procedência e Estado</h3>
+            <p>Exija a nota fiscal original ou recibo. Verifique o estado físico, a saúde da bateria e o funcionamento
+              de câmeras e biometria antes de pagar.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Dica de Rodapé -->
+      <div class="tip-box">
+        <i class="fas fa-lightbulb text-yellow-500 text-xl mr-3"></i>
+        <p class="font-medium">Dica: Encontre o IMEI digitando <strong>*#06#</strong> no discador do telefone.</p>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
